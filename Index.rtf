@@ -1,0 +1,2260 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2907
+\cocoatextscaling1\cocoaplatform1{\fonttbl\f0\fnil\fcharset0 .SFUI-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!DOCTYPE html>
+\f1\fs24 \
+
+\f0\fs34 <html lang="en">
+\f1\fs24 \
+
+\f0\fs34 <head>
+\f1\fs24 \
+
+\f0\fs34 <meta charset="UTF-8">
+\f1\fs24 \
+
+\f0\fs34 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+\f1\fs24 \
+
+\f0\fs34 <title>Brightwood Academy | Inspiring Excellence in Education</title>
+\f1\fs24 \
+
+\f0\fs34 <script src="{\field{\*\fldinst{HYPERLINK "https://cdn.tailwindcss.com"}}{\fldrslt https://cdn.tailwindcss.com}}"></script>
+\f1\fs24 \
+
+\f0\fs34 <link rel="preconnect" href="{\field{\*\fldinst{HYPERLINK "https://fonts.googleapis.com"}}{\fldrslt https://fonts.googleapis.com}}">
+\f1\fs24 \
+
+\f0\fs34 <link href="{\field{\*\fldinst{HYPERLINK "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"}}{\fldrslt https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap}}" rel="stylesheet">
+\f1\fs24 \
+
+\f0\fs34 <link rel="stylesheet" href="{\field{\*\fldinst{HYPERLINK "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}}{\fldrslt https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css}}">
+\f1\fs24 \
+
+\f0\fs34 <style>
+\f1\fs24 \
+
+\f0\fs34   :root\{
+\f1\fs24 \
+
+\f0\fs34     --navy:#1a2b4c;
+\f1\fs24 \
+
+\f0\fs34     --gold:#e0a94b;
+\f1\fs24 \
+
+\f0\fs34     --cream:#fbf7f0;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   *\{scroll-behavior:smooth;\}
+\f1\fs24 \
+
+\f0\fs34   body\{
+\f1\fs24 \
+
+\f0\fs34     font-family:'Poppins', sans-serif;
+\f1\fs24 \
+
+\f0\fs34     background:var(--cream);
+\f1\fs24 \
+
+\f0\fs34     color:#2b2b2b;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   h1,h2,h3,.font-display\{
+\f1\fs24 \
+
+\f0\fs34     font-family:'Playfair Display', serif;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .gradient-navy\{
+\f1\fs24 \
+
+\f0\fs34     background: linear-gradient(135deg,#16233f 0%, #1a2b4c 50%, #24365e 100%);
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .gradient-gold\{
+\f1\fs24 \
+
+\f0\fs34     background: linear-gradient(90deg,#e0a94b, #f2cd82);
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .text-gradient\{
+\f1\fs24 \
+
+\f0\fs34     background: linear-gradient(90deg,#e0a94b, #f6d68a);
+\f1\fs24 \
+
+\f0\fs34     -webkit-background-clip:text;
+\f1\fs24 \
+
+\f0\fs34     -webkit-text-fill-color:transparent;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .hero-shape\{
+\f1\fs24 \
+
+\f0\fs34     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .card-hover\{
+\f1\fs24 \
+
+\f0\fs34     transition: transform .4s ease, box-shadow .4s ease;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .card-hover:hover\{
+\f1\fs24 \
+
+\f0\fs34     transform: translateY(-10px);
+\f1\fs24 \
+
+\f0\fs34     box-shadow: 0 25px 40px -12px rgba(26,43,76,0.25);
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .reveal\{
+\f1\fs24 \
+
+\f0\fs34     opacity:0;
+\f1\fs24 \
+
+\f0\fs34     transform: translateY(40px);
+\f1\fs24 \
+
+\f0\fs34     transition: all .8s cubic-bezier(.2,.8,.2,1);
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .reveal.active\{
+\f1\fs24 \
+
+\f0\fs34     opacity:1;
+\f1\fs24 \
+
+\f0\fs34     transform: translateY(0);
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .nav-link\{position:relative;\}
+\f1\fs24 \
+
+\f0\fs34   .nav-link::after\{
+\f1\fs24 \
+
+\f0\fs34     content:'';
+\f1\fs24 \
+
+\f0\fs34     position:absolute;
+\f1\fs24 \
+
+\f0\fs34     left:0; bottom:-4px;
+\f1\fs24 \
+
+\f0\fs34     width:0%; height:2px;
+\f1\fs24 \
+
+\f0\fs34     background: var(--gold);
+\f1\fs24 \
+
+\f0\fs34     transition: width .3s ease;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .nav-link:hover::after\{width:100%;\}
+\f1\fs24 \
+
+\f0\fs34   ::-webkit-scrollbar\{width:10px;\}
+\f1\fs24 \
+
+\f0\fs34   ::-webkit-scrollbar-track\{background:#f1f1f1;\}
+\f1\fs24 \
+
+\f0\fs34   ::-webkit-scrollbar-thumb\{background:var(--navy); border-radius:10px;\}
+\f1\fs24 \
+
+\f0\fs34   .floating\{animation: float 6s ease-in-out infinite;\}
+\f1\fs24 \
+
+\f0\fs34   @keyframes float\{
+\f1\fs24 \
+
+\f0\fs34     0%,100%\{transform: translateY(0px);\}
+\f1\fs24 \
+
+\f0\fs34     50%\{transform: translateY(-18px);\}
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .counter-icon\{
+\f1\fs24 \
+
+\f0\fs34     background: rgba(224,169,75,0.15);
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .testimonial-card\{
+\f1\fs24 \
+
+\f0\fs34     display:none;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .testimonial-card.active\{
+\f1\fs24 \
+
+\f0\fs34     display:block;
+\f1\fs24 \
+
+\f0\fs34     animation: fadeIn .6s ease;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   @keyframes fadeIn\{
+\f1\fs24 \
+
+\f0\fs34     from\{opacity:0; transform:translateX(20px);\}
+\f1\fs24 \
+
+\f0\fs34     to\{opacity:1; transform:translateX(0);\}
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .accordion-content\{
+\f1\fs24 \
+
+\f0\fs34     max-height:0;
+\f1\fs24 \
+
+\f0\fs34     overflow:hidden;
+\f1\fs24 \
+
+\f0\fs34     transition: max-height .4s ease;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   input:focus, textarea:focus\{
+\f1\fs24 \
+
+\f0\fs34     outline:none;
+\f1\fs24 \
+
+\f0\fs34     box-shadow: 0 0 0 3px rgba(224,169,75,0.4);
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .mobile-menu\{
+\f1\fs24 \
+
+\f0\fs34     transition: max-height .5s ease, opacity .3s ease;
+\f1\fs24 \
+
+\f0\fs34     max-height:0;
+\f1\fs24 \
+
+\f0\fs34     overflow:hidden;
+\f1\fs24 \
+
+\f0\fs34     opacity:0;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .mobile-menu.open\{
+\f1\fs24 \
+
+\f0\fs34     max-height:500px;
+\f1\fs24 \
+
+\f0\fs34     opacity:1;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   .badge-dot\{
+\f1\fs24 \
+
+\f0\fs34     box-shadow: 0 0 0 4px rgba(224,169,75,0.25);
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34 </style>
+\f1\fs24 \
+
+\f0\fs34 </head>
+\f1\fs24 \
+
+\f0\fs34 <body class="antialiased">
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- Top Bar -->
+\f1\fs24 \
+
+\f0\fs34 <div class="gradient-navy text-white text-sm">
+\f1\fs24 \
+
+\f0\fs34   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col sm:flex-row justify-between items-center gap-1">
+\f1\fs24 \
+
+\f0\fs34     <div class="flex items-center gap-4 flex-wrap justify-center">
+\f1\fs24 \
+
+\f0\fs34       <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-[var(--gold)]"></i> (555) 123-4567</span>
+\f1\fs24 \
+
+\f0\fs34       <span class="flex items-center gap-2"><i class="fa-solid fa-envelope text-[var(--gold)]"></i> {\field{\*\fldinst{HYPERLINK "mailto:info@brightwood.edu"}}{\fldrslt info@brightwood.edu}}</span>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div class="flex items-center gap-4">
+\f1\fs24 \
+
+\f0\fs34       <a href="#" class="hover:text-[var(--gold)] transition"><i class="fa-brands fa-facebook"></i></a>
+\f1\fs24 \
+
+\f0\fs34       <a href="#" class="hover:text-[var(--gold)] transition"><i class="fa-brands fa-instagram"></i></a>
+\f1\fs24 \
+
+\f0\fs34       <a href="#" class="hover:text-[var(--gold)] transition"><i class="fa-brands fa-twitter"></i></a>
+\f1\fs24 \
+
+\f0\fs34       <a href="#" class="hover:text-[var(--gold)] transition"><i class="fa-brands fa-youtube"></i></a>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </div>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- Navbar -->
+\f1\fs24 \
+
+\f0\fs34 <nav id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-md transition-all">
+\f1\fs24 \
+
+\f0\fs34   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+\f1\fs24 \
+
+\f0\fs34     <div class="flex justify-between items-center h-20">
+\f1\fs24 \
+
+\f0\fs34       <a href="#home" class="flex items-center gap-3">
+\f1\fs24 \
+
+\f0\fs34         <div class="w-11 h-11 rounded-full gradient-navy flex items-center justify-center">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-graduation-cap text-[var(--gold)] text-xl"></i>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div>
+\f1\fs24 \
+
+\f0\fs34           <h1 class="text-xl font-bold text-[var(--navy)] leading-none">Brightwood</h1>
+\f1\fs24 \
+
+\f0\fs34           <span class="text-xs tracking-widest text-gray-500">A C A D E M Y</span>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34       </a>
+\f1\fs24 \
+
+\f0\fs34       <div class="hidden lg:flex items-center gap-8 font-medium text-[var(--navy)]">
+\f1\fs24 \
+
+\f0\fs34         <a href="#home" class="nav-link">Home</a>
+\f1\fs24 \
+
+\f0\fs34         <a href="#about" class="nav-link">About</a>
+\f1\fs24 \
+
+\f0\fs34         <a href="#academics" class="nav-link">Academics</a>
+\f1\fs24 \
+
+\f0\fs34         <a href="#stats" class="nav-link">Achievements</a>
+\f1\fs24 \
+
+\f0\fs34         <a href="#gallery" class="nav-link">Campus Life</a>
+\f1\fs24 \
+
+\f0\fs34         <a href="#testimonials" class="nav-link">Testimonials</a>
+\f1\fs24 \
+
+\f0\fs34         <a href="#contact" class="nav-link">Contact</a>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <div class="hidden lg:block">
+\f1\fs24 \
+
+\f0\fs34         <a href="#admission" class="gradient-gold text-[var(--navy)] font-semibold px-6 py-2.5 rounded-full shadow hover:shadow-lg transition">Apply Now</a>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <button id="menuBtn" class="lg:hidden text-2xl text-[var(--navy)]">
+\f1\fs24 \
+
+\f0\fs34         <i class="fa-solid fa-bars"></i>
+\f1\fs24 \
+
+\f0\fs34       </button>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34   <div id="mobileMenu" class="mobile-menu lg:hidden bg-white border-t">
+\f1\fs24 \
+
+\f0\fs34     <div class="px-4 py-4 flex flex-col gap-4 font-medium text-[var(--navy)]">
+\f1\fs24 \
+
+\f0\fs34       <a href="#home">Home</a>
+\f1\fs24 \
+
+\f0\fs34       <a href="#about">About</a>
+\f1\fs24 \
+
+\f0\fs34       <a href="#academics">Academics</a>
+\f1\fs24 \
+
+\f0\fs34       <a href="#stats">Achievements</a>
+\f1\fs24 \
+
+\f0\fs34       <a href="#gallery">Campus Life</a>
+\f1\fs24 \
+
+\f0\fs34       <a href="#testimonials">Testimonials</a>
+\f1\fs24 \
+
+\f0\fs34       <a href="#contact">Contact</a>
+\f1\fs24 \
+
+\f0\fs34       <a href="#admission" class="gradient-gold text-[var(--navy)] text-center font-semibold px-6 py-2.5 rounded-full">Apply Now</a>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </nav>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- Hero -->
+\f1\fs24 \
+
+\f0\fs34 <section id="home" class="relative gradient-navy hero-shape pt-16 pb-32 lg:pb-48 overflow-hidden">
+\f1\fs24 \
+
+\f0\fs34   <div class="absolute top-20 right-10 w-72 h-72 bg-[var(--gold)]/20 rounded-full blur-3xl floating"></div>
+\f1\fs24 \
+
+\f0\fs34   <div class="absolute bottom-10 left-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl floating" style="animation-delay:2s;"></div>
+\f1\fs24 \
+
+\f0\fs34   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-2 gap-12 items-center pt-10">
+\f1\fs24 \
+
+\f0\fs34     <div class="text-white reveal">
+\f1\fs24 \
+
+\f0\fs34       <span class="inline-flex items-center gap-2 bg-white/10 text-[var(--gold)] px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+\f1\fs24 \
+
+\f0\fs34         <span class="w-2 h-2 rounded-full bg-[var(--gold)] badge-dot"></span> Enrolling Now for Fall 2025
+\f1\fs24 \
+
+\f0\fs34       </span>
+\f1\fs24 \
+
+\f0\fs34       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+\f1\fs24 \
+
+\f0\fs34         Shaping Tomorrow's <span class="text-gradient">Leaders</span>, Today.
+\f1\fs24 \
+
+\f0\fs34       </h1>
+\f1\fs24 \
+
+\f0\fs34       <p class="text-gray-300 text-lg mb-8 max-w-lg">
+\f1\fs24 \
+
+\f0\fs34         At Brightwood Academy, we blend rigorous academics with character development to nurture confident, curious, and compassionate learners from K-12.
+\f1\fs24 \
+
+\f0\fs34       </p>
+\f1\fs24 \
+
+\f0\fs34       <div class="flex flex-wrap gap-4">
+\f1\fs24 \
+
+\f0\fs34         <a href="#admission" class="gradient-gold text-[var(--navy)] font-semibold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition">
+\f1\fs24 \
+
+\f0\fs34           Enroll Your Child
+\f1\fs24 \
+
+\f0\fs34         </a>
+\f1\fs24 \
+
+\f0\fs34         <a href="#about" class="border border-white/30 text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white/10 transition flex items-center gap-2">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-play"></i> Take a Tour
+\f1\fs24 \
+
+\f0\fs34         </a>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <div class="flex items-center gap-8 mt-10">
+\f1\fs24 \
+
+\f0\fs34         <div>
+\f1\fs24 \
+
+\f0\fs34           <h3 class="text-3xl font-bold text-[var(--gold)]">25+</h3>
+\f1\fs24 \
+
+\f0\fs34           <p class="text-gray-400 text-sm">Years of Excellence</p>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="w-px h-10 bg-white/20"></div>
+\f1\fs24 \
+
+\f0\fs34         <div>
+\f1\fs24 \
+
+\f0\fs34           <h3 class="text-3xl font-bold text-[var(--gold)]">98%</h3>
+\f1\fs24 \
+
+\f0\fs34           <p class="text-gray-400 text-sm">Graduation Rate</p>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="w-px h-10 bg-white/20"></div>
+\f1\fs24 \
+
+\f0\fs34         <div>
+\f1\fs24 \
+
+\f0\fs34           <h3 class="text-3xl font-bold text-[var(--gold)]">40+</h3>
+\f1\fs24 \
+
+\f0\fs34           <p class="text-gray-400 text-sm">Expert Teachers</p>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div class="relative reveal hidden lg:block">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80"}}{\fldrslt https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80}}" alt="Students" class="rounded-3xl shadow-2xl w-full h-[480px] object-cover">
+\f1\fs24 \
+
+\f0\fs34       <div class="absolute -bottom-8 -left-8 bg-white p-5 rounded-2xl shadow-2xl flex items-center gap-4 w-64">
+\f1\fs24 \
+
+\f0\fs34         <div class="w-14 h-14 rounded-full bg-[var(--navy)] flex items-center justify-center text-[var(--gold)] text-xl">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-trophy"></i>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div>
+\f1\fs24 \
+
+\f0\fs34           <p class="font-bold text-[var(--navy)] text-sm">Award Winning</p>
+\f1\fs24 \
+
+\f0\fs34           <p class="text-xs text-gray-500">Top Ranked School 2024</p>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </section>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- About -->
+\f1\fs24 \
+
+\f0\fs34 <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+\f1\fs24 \
+
+\f0\fs34   <div class="grid lg:grid-cols-2 gap-16 items-center">
+\f1\fs24 \
+
+\f0\fs34     <div class="relative reveal">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80"}}{\fldrslt https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80}}" class="rounded-2xl shadow-xl w-full h-96 object-cover">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=80"}}{\fldrslt https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=80}}" class="rounded-2xl shadow-xl w-48 h-56 object-cover absolute -bottom-10 -right-6 border-4 border-white hidden sm:block">
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div class="reveal">
+\f1\fs24 \
+
+\f0\fs34       <span class="text-[var(--gold)] font-semibold tracking-widest uppercase text-sm">About Brightwood</span>
+\f1\fs24 \
+
+\f0\fs34       <h2 class="text-3xl sm:text-4xl font-bold text-[var(--navy)] mt-3 mb-6">A Legacy of Nurturing Bright Futures</h2>
+\f1\fs24 \
+
+\f0\fs34       <p class="text-gray-600 mb-6 leading-relaxed">
+\f1\fs24 \
+
+\f0\fs34         Since 1999, Brightwood Academy has been committed to providing a holistic education that balances academic rigor with creativity, athletics, and community service. Our dedicated faculty and modern facilities create an environment where every student can thrive.
+\f1\fs24 \
+
+\f0\fs34       </p>
+\f1\fs24 \
+
+\f0\fs34       <div class="grid sm:grid-cols-2 gap-6 mb-8">
+\f1\fs24 \
+
+\f0\fs34         <div class="flex items-start gap-3">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-check-circle text-[var(--gold)] text-xl mt-1"></i>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <h4 class="font-semibold text-[var(--navy)]">Personalized Learning</h4>
+\f1\fs24 \
+
+\f0\fs34             <p class="text-sm text-gray-500">Tailored plans for every student.</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="flex items-start gap-3">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-check-circle text-[var(--gold)] text-xl mt-1"></i>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <h4 class="font-semibold text-[var(--navy)]">Modern Facilities</h4>
+\f1\fs24 \
+
+\f0\fs34             <p class="text-sm text-gray-500">Science labs, arts studios & more.</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="flex items-start gap-3">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-check-circle text-[var(--gold)] text-xl mt-1"></i>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <h4 class="font-semibold text-[var(--navy)]">Certified Educators</h4>
+\f1\fs24 \
+
+\f0\fs34             <p class="text-sm text-gray-500">Passionate & experienced staff.</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="flex items-start gap-3">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-check-circle text-[var(--gold)] text-xl mt-1"></i>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <h4 class="font-semibold text-[var(--navy)]">Extracurriculars</h4>
+\f1\fs24 \
+
+\f0\fs34             <p class="text-sm text-gray-500">Sports, arts, clubs & competitions.</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <a href="#academics" class="inline-flex items-center gap-2 bg-[var(--navy)] text-white font-semibold px-7 py-3 rounded-full hover:bg-[#24365e] transition">
+\f1\fs24 \
+
+\f0\fs34         Explore Academics <i class="fa-solid fa-arrow-right"></i>
+\f1\fs24 \
+
+\f0\fs34       </a>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </section>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- Academics / Programs -->
+\f1\fs24 \
+
+\f0\fs34 <section id="academics" class="bg-white py-24">
+\f1\fs24 \
+
+\f0\fs34   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+\f1\fs24 \
+
+\f0\fs34     <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+\f1\fs24 \
+
+\f0\fs34       <span class="text-[var(--gold)] font-semibold tracking-widest uppercase text-sm">Our Programs</span>
+\f1\fs24 \
+
+\f0\fs34       <h2 class="text-3xl sm:text-4xl font-bold text-[var(--navy)] mt-3">Comprehensive Academic Pathways</h2>
+\f1\fs24 \
+
+\f0\fs34       <p class="text-gray-500 mt-4">From early learners to college-bound seniors, we offer programs designed to challenge and inspire at every stage.</p>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+\f1\fs24 \
+
+\f0\fs34       <div class="card-hover bg-[var(--cream)] rounded-2xl p-8 text-center reveal">
+\f1\fs24 \
+
+\f0\fs34         <div class="w-16 h-16 mx-auto rounded-2xl gradient-navy flex items-center justify-center text-[var(--gold)] text-2xl mb-5">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-child-reaching"></i>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <h3 class="font-semibold text-lg text-[var(--navy)] mb-2">Early Years</h3>
+\f1\fs24 \
+
+\f0\fs34         <p class="text-sm text-gray-500">Play-based learning foundations for ages 3-5.</p>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <div class="card-hover bg-[var(--cream)] rounded-2xl p-8 text-center reveal">
+\f1\fs24 \
+
+\f0\fs34         <div class="w-16 h-16 mx-auto rounded-2xl gradient-navy flex items-center justify-center text-[var(--gold)] text-2xl mb-5">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-book-open"></i>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <h3 class="font-semibold text-lg text-[var(--navy)] mb-2">Primary School</h3>
+\f1\fs24 \
+
+\f0\fs34         <p class="text-sm text-gray-500">Building strong fundamentals, grades K-5.</p>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <div class="card-hover bg-[var(--cream)] rounded-2xl p-8 text-center reveal">
+\f1\fs24 \
+
+\f0\fs34         <div class="w-16 h-16 mx-auto rounded-2xl gradient-navy flex items-center justify-center text-[var(--gold)] text-2xl mb-5">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-flask"></i>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <h3 class="font-semibold text-lg text-[var(--navy)] mb-2">Middle School</h3>
+\f1\fs24 \
+
+\f0\fs34         <p class="text-sm text-gray-500">Exploratory curriculum for grades 6-8.</p>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <div class="card-hover bg-[var(--cream)] rounded-2xl p-8 text-center reveal">
+\f1\fs24 \
+
+\f0\fs34         <div class="w-16 h-16 mx-auto rounded-2xl gradient-navy flex items-center justify-center text-[var(--gold)] text-2xl mb-5">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-user-graduate"></i>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <h3 class="font-semibold text-lg text-[var(--navy)] mb-2">High School</h3>
+\f1\fs24 \
+
+\f0\fs34         <p class="text-sm text-gray-500">College-prep & AP courses, grades 9-12.</p>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </section>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- Stats -->
+\f1\fs24 \
+
+\f0\fs34 <section id="stats" class="gradient-navy py-20 relative overflow-hidden">
+\f1\fs24 \
+
+\f0\fs34   <div class="absolute inset-0 opacity-10" style="background-image:url('{\field{\*\fldinst{HYPERLINK "https://www.transparenttextures.com/patterns/cubes.png"}}{\fldrslt https://www.transparenttextures.com/patterns/cubes.png}}');"></div>
+\f1\fs24 \
+
+\f0\fs34   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center relative z-10">
+\f1\fs24 \
+
+\f0\fs34     <div class="reveal">
+\f1\fs24 \
+
+\f0\fs34       <div class="w-16 h-16 mx-auto rounded-full counter-icon flex items-center justify-center text-[var(--gold)] text-2xl mb-4">
+\f1\fs24 \
+
+\f0\fs34         <i class="fa-solid fa-users"></i>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <h3 class="text-4xl font-bold text-white counter" data-target="1200">0</h3>
+\f1\fs24 \
+
+\f0\fs34       <p class="text-gray-400 mt-2">Happy Students</p>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div class="reveal">
+\f1\fs24 \
+
+\f0\fs34       <div class="w-16 h-16 mx-auto rounded-full counter-icon flex items-center justify-center text-[var(--gold)] text-2xl mb-4">
+\f1\fs24 \
+
+\f0\fs34         <i class="fa-solid fa-chalkboard-user"></i>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <h3 class="text-4xl font-bold text-white counter" data-target="45">0</h3>
+\f1\fs24 \
+
+\f0\fs34       <p class="text-gray-400 mt-2">Expert Faculty</p>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div class="reveal">
+\f1\fs24 \
+
+\f0\fs34       <div class="w-16 h-16 mx-auto rounded-full counter-icon flex items-center justify-center text-[var(--gold)] text-2xl mb-4">
+\f1\fs24 \
+
+\f0\fs34         <i class="fa-solid fa-award"></i>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <h3 class="text-4xl font-bold text-white counter" data-target="60">0</h3>
+\f1\fs24 \
+
+\f0\fs34       <p class="text-gray-400 mt-2">Awards Won</p>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div class="reveal">
+\f1\fs24 \
+
+\f0\fs34       <div class="w-16 h-16 mx-auto rounded-full counter-icon flex items-center justify-center text-[var(--gold)] text-2xl mb-4">
+\f1\fs24 \
+
+\f0\fs34         <i class="fa-solid fa-school"></i>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <h3 class="text-4xl font-bold text-white counter" data-target="25">0</h3>
+\f1\fs24 \
+
+\f0\fs34       <p class="text-gray-400 mt-2">Years of Service</p>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </section>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- Gallery -->
+\f1\fs24 \
+
+\f0\fs34 <section id="gallery" class="py-24 bg-white">
+\f1\fs24 \
+
+\f0\fs34   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+\f1\fs24 \
+
+\f0\fs34     <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+\f1\fs24 \
+
+\f0\fs34       <span class="text-[var(--gold)] font-semibold tracking-widest uppercase text-sm">Campus Life</span>
+\f1\fs24 \
+
+\f0\fs34       <h2 class="text-3xl sm:text-4xl font-bold text-[var(--navy)] mt-3">A Vibrant Learning Community</h2>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=500&q=80"}}{\fldrslt https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=500&q=80}}" class="rounded-xl h-56 w-full object-cover card-hover reveal">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=500&q=80"}}{\fldrslt https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=500&q=80}}" class="rounded-xl h-56 w-full object-cover card-hover reveal">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80"}}{\fldrslt https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80}}" class="rounded-xl h-56 w-full object-cover card-hover reveal">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80"}}{\fldrslt https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80}}" class="rounded-xl h-56 w-full object-cover card-hover reveal">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=500&q=80"}}{\fldrslt https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=500&q=80}}" class="rounded-xl h-56 w-full object-cover card-hover reveal hidden md:block">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=500&q=80"}}{\fldrslt https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=500&q=80}}" class="rounded-xl h-56 w-full object-cover card-hover reveal hidden md:block">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1596496181848-3091d4878b24?auto=format&fit=crop&w=500&q=80"}}{\fldrslt https://images.unsplash.com/photo-1596496181848-3091d4878b24?auto=format&fit=crop&w=500&q=80}}" class="rounded-xl h-56 w-full object-cover card-hover reveal hidden md:block">
+\f1\fs24 \
+
+\f0\fs34       <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&w=500&q=80"}}{\fldrslt https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&w=500&q=80}}" class="rounded-xl h-56 w-full object-cover card-hover reveal hidden md:block">
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </section>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- Testimonials -->
+\f1\fs24 \
+
+\f0\fs34 <section id="testimonials" class="py-24 bg-[var(--cream)]">
+\f1\fs24 \
+
+\f0\fs34   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+\f1\fs24 \
+
+\f0\fs34     <span class="text-[var(--gold)] font-semibold tracking-widest uppercase text-sm">Testimonials</span>
+\f1\fs24 \
+
+\f0\fs34     <h2 class="text-3xl sm:text-4xl font-bold text-[var(--navy)] mt-3 mb-14">What Our Families Say</h2>
+\f1\fs24 \
+
+\f0\fs34     <div class="relative">
+\f1\fs24 \
+
+\f0\fs34       <div class="testimonial-card active">
+\f1\fs24 \
+
+\f0\fs34         <img src="{\field{\*\fldinst{HYPERLINK "https://randomuser.me/api/portraits/women/68.jpg"}}{\fldrslt https://randomuser.me/api/portraits/women/68.jpg}}" class="w-20 h-20 rounded-full mx-auto mb-5 border-4 border-white shadow-lg">
+\f1\fs24 \
+
+\f0\fs34         <p class="text-lg text-gray-600 italic mb-6">"Brightwood transformed my daughter's confidence. The teachers genuinely care about each child's growth, both academically and personally."</p>
+\f1\fs24 \
+
+\f0\fs34         <h4 class="font-semibold text-[var(--navy)]">Sarah Mitchell</h4>
+\f1\fs24 \
+
+\f0\fs34         <span class="text-sm text-gray-500">Parent of Grade 4 Student</span>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <div class="testimonial-card">
+\f1\fs24 \
+
+\f0\fs34         <img src="{\field{\*\fldinst{HYPERLINK "https://randomuser.me/api/portraits/men/32.jpg"}}{\fldrslt https://randomuser.me/api/portraits/men/32.jpg}}" class="w-20 h-20 rounded-full mx-auto mb-5 border-4 border-white shadow-lg">
+\f1\fs24 \
+
+\f0\fs34         <p class="text-lg text-gray-600 italic mb-6">"The STEM program at Brightwood prepared me incredibly well for college engineering. I couldn't have asked for a better foundation."</p>
+\f1\fs24 \
+
+\f0\fs34         <h4 class="font-semibold text-[var(--navy)]">James Carter</h4>
+\f1\fs24 \
+
+\f0\fs34         <span class="text-sm text-gray-500">Class of 2023 Alumnus</span>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <div class="testimonial-card">
+\f1\fs24 \
+
+\f0\fs34         <img src="{\field{\*\fldinst{HYPERLINK "https://randomuser.me/api/portraits/women/44.jpg"}}{\fldrslt https://randomuser.me/api/portraits/women/44.jpg}}" class="w-20 h-20 rounded-full mx-auto mb-5 border-4 border-white shadow-lg">
+\f1\fs24 \
+
+\f0\fs34         <p class="text-lg text-gray-600 italic mb-6">"From arts to athletics, Brightwood offers a well-rounded experience. The community here feels like a second family."</p>
+\f1\fs24 \
+
+\f0\fs34         <h4 class="font-semibold text-[var(--navy)]">Elena Rodriguez</h4>
+\f1\fs24 \
+
+\f0\fs34         <span class="text-sm text-gray-500">Parent of Grade 8 Student</span>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <div class="flex justify-center gap-3 mt-8">
+\f1\fs24 \
+
+\f0\fs34         <button class="dot w-3 h-3 rounded-full bg-[var(--navy)] opacity-100" data-i="0"></button>
+\f1\fs24 \
+
+\f0\fs34         <button class="dot w-3 h-3 rounded-full bg-[var(--navy)] opacity-30" data-i="1"></button>
+\f1\fs24 \
+
+\f0\fs34         <button class="dot w-3 h-3 rounded-full bg-[var(--navy)] opacity-30" data-i="2"></button>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </section>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- FAQ + Admission -->
+\f1\fs24 \
+
+\f0\fs34 <section id="admission" class="py-24 bg-white">
+\f1\fs24 \
+
+\f0\fs34   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
+\f1\fs24 \
+
+\f0\fs34     <div class="reveal">
+\f1\fs24 \
+
+\f0\fs34       <span class="text-[var(--gold)] font-semibold tracking-widest uppercase text-sm">Admissions</span>
+\f1\fs24 \
+
+\f0\fs34       <h2 class="text-3xl sm:text-4xl font-bold text-[var(--navy)] mt-3 mb-6">Frequently Asked Questions</h2>
+\f1\fs24 \
+
+\f0\fs34       <div class="space-y-4">
+\f1\fs24 \
+
+\f0\fs34         <div class="border border-gray-200 rounded-xl overflow-hidden">
+\f1\fs24 \
+
+\f0\fs34           <button class="faq-btn w-full flex justify-between items-center px-6 py-4 text-left font-medium text-[var(--navy)]">
+\f1\fs24 \
+
+\f0\fs34             What are the admission requirements?
+\f1\fs24 \
+
+\f0\fs34             <i class="fa-solid fa-plus text-[var(--gold)] transition-transform"></i>
+\f1\fs24 \
+
+\f0\fs34           </button>
+\f1\fs24 \
+
+\f0\fs34           <div class="accordion-content px-6 text-gray-500 text-sm">
+\f1\fs24 \
+
+\f0\fs34             <p class="pb-4">Applicants must submit an application form, previous academic records, and complete an interview/assessment appropriate to their grade level.</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="border border-gray-200 rounded-xl overflow-hidden">
+\f1\fs24 \
+
+\f0\fs34           <button class="faq-btn w-full flex justify-between items-center px-6 py-4 text-left font-medium text-[var(--navy)]">
+\f1\fs24 \
+
+\f0\fs34             Do you offer financial aid or scholarships?
+\f1\fs24 \
+
+\f0\fs34             <i class="fa-solid fa-plus text-[var(--gold)] transition-transform"></i>
+\f1\fs24 \
+
+\f0\fs34           </button>
+\f1\fs24 \
+
+\f0\fs34           <div class="accordion-content px-6 text-gray-500 text-sm">
+\f1\fs24 \
+
+\f0\fs34             <p class="pb-4">Yes, Brightwood Academy offers need-based financial aid and merit scholarships for qualifying students. Contact our admissions office for details.</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="border border-gray-200 rounded-xl overflow-hidden">
+\f1\fs24 \
+
+\f0\fs34           <button class="faq-btn w-full flex justify-between items-center px-6 py-4 text-left font-medium text-[var(--navy)]">
+\f1\fs24 \
+
+\f0\fs34             What is the student-to-teacher ratio?
+\f1\fs24 \
+
+\f0\fs34             <i class="fa-solid fa-plus text-[var(--gold)] transition-transform"></i>
+\f1\fs24 \
+
+\f0\fs34           </button>
+\f1\fs24 \
+
+\f0\fs34           <div class="accordion-content px-6 text-gray-500 text-sm">
+\f1\fs24 \
+
+\f0\fs34             <p class="pb-4">We maintain a low student-to-teacher ratio of 15:1 to ensure personalized attention for every student.</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="border border-gray-200 rounded-xl overflow-hidden">
+\f1\fs24 \
+
+\f0\fs34           <button class="faq-btn w-full flex justify-between items-center px-6 py-4 text-left font-medium text-[var(--navy)]">
+\f1\fs24 \
+
+\f0\fs34             Can I schedule a campus tour?
+\f1\fs24 \
+
+\f0\fs34             <i class="fa-solid fa-plus text-[var(--gold)] transition-transform"></i>
+\f1\fs24 \
+
+\f0\fs34           </button>
+\f1\fs24 \
+
+\f0\fs34           <div class="accordion-content px-6 text-gray-500 text-sm">
+\f1\fs24 \
+
+\f0\fs34             <p class="pb-4">Absolutely! Use the contact form below or call our office to schedule a personalized campus tour at a time that suits you.</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div class="reveal gradient-navy rounded-3xl p-10 text-white relative overflow-hidden">
+\f1\fs24 \
+
+\f0\fs34       <div class="absolute -top-10 -right-10 w-40 h-40 bg-[var(--gold)]/20 rounded-full blur-2xl"></div>
+\f1\fs24 \
+
+\f0\fs34       <h3 class="text-2xl font-bold mb-3">Ready to Join Brightwood?</h3>
+\f1\fs24 \
+
+\f0\fs34       <p class="text-gray-300 mb-8">Applications for the upcoming academic year are now open. Secure your child's spot today!</p>
+\f1\fs24 \
+
+\f0\fs34       <div class="space-y-5">
+\f1\fs24 \
+
+\f0\fs34         <div class="flex items-center gap-4">
+\f1\fs24 \
+
+\f0\fs34           <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[var(--gold)]">
+\f1\fs24 \
+
+\f0\fs34             <i class="fa-solid fa-calendar-check"></i>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <p class="font-semibold">Application Deadline</p>
+\f1\fs24 \
+
+\f0\fs34             <p class="text-sm text-gray-400">March 31, 2025</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="flex items-center gap-4">
+\f1\fs24 \
+
+\f0\fs34           <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[var(--gold)]">
+\f1\fs24 \
+
+\f0\fs34             <i class="fa-solid fa-file-lines"></i>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <p class="font-semibold">Application Fee</p>
+\f1\fs24 \
+
+\f0\fs34             <p class="text-sm text-gray-400">$75 (non-refundable)</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="flex items-center gap-4">
+\f1\fs24 \
+
+\f0\fs34           <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[var(--gold)]">
+\f1\fs24 \
+
+\f0\fs34             <i class="fa-solid fa-comments"></i>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <p class="font-semibold">Interview Process</p>
+\f1\fs24 \
+
+\f0\fs34             <p class="text-sm text-gray-400">Scheduled within 2 weeks</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <a href="#contact" class="mt-10 inline-block w-full text-center gradient-gold text-[var(--navy)] font-semibold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition">
+\f1\fs24 \
+
+\f0\fs34         Start Application
+\f1\fs24 \
+
+\f0\fs34       </a>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </section>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- Contact -->
+\f1\fs24 \
+
+\f0\fs34 <section id="contact" class="py-24 bg-[var(--cream)]">
+\f1\fs24 \
+
+\f0\fs34   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+\f1\fs24 \
+
+\f0\fs34     <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+\f1\fs24 \
+
+\f0\fs34       <span class="text-[var(--gold)] font-semibold tracking-widest uppercase text-sm">Get In Touch</span>
+\f1\fs24 \
+
+\f0\fs34       <h2 class="text-3xl sm:text-4xl font-bold text-[var(--navy)] mt-3">We'd Love to Hear From You</h2>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div class="grid lg:grid-cols-5 gap-10">
+\f1\fs24 \
+
+\f0\fs34       <div class="lg:col-span-3 bg-white rounded-2xl shadow-xl p-8 reveal">
+\f1\fs24 \
+
+\f0\fs34         <form id="contactForm" class="space-y-5">
+\f1\fs24 \
+
+\f0\fs34           <div class="grid sm:grid-cols-2 gap-5">
+\f1\fs24 \
+
+\f0\fs34             <div>
+\f1\fs24 \
+
+\f0\fs34               <label class="block text-sm font-medium text-gray-600 mb-1.5">Full Name</label>
+\f1\fs24 \
+
+\f0\fs34               <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm" placeholder="John Doe">
+\f1\fs24 \
+
+\f0\fs34             </div>
+\f1\fs24 \
+
+\f0\fs34             <div>
+\f1\fs24 \
+
+\f0\fs34               <label class="block text-sm font-medium text-gray-600 mb-1.5">Email Address</label>
+\f1\fs24 \
+
+\f0\fs34               <input type="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm" placeholder="{\field{\*\fldinst{HYPERLINK "mailto:john@example.com"}}{\fldrslt john@example.com}}">
+\f1\fs24 \
+
+\f0\fs34             </div>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34           <div class="grid sm:grid-cols-2 gap-5">
+\f1\fs24 \
+
+\f0\fs34             <div>
+\f1\fs24 \
+
+\f0\fs34               <label class="block text-sm font-medium text-gray-600 mb-1.5">Phone Number</label>
+\f1\fs24 \
+
+\f0\fs34               <input type="tel" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm" placeholder="+1 (555) 000-0000">
+\f1\fs24 \
+
+\f0\fs34             </div>
+\f1\fs24 \
+
+\f0\fs34             <div>
+\f1\fs24 \
+
+\f0\fs34               <label class="block text-sm font-medium text-gray-600 mb-1.5">Interested Grade</label>
+\f1\fs24 \
+
+\f0\fs34               <select class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-500">
+\f1\fs24 \
+
+\f0\fs34                 <option>Select Grade Level</option>
+\f1\fs24 \
+
+\f0\fs34                 <option>Early Years (3-5)</option>
+\f1\fs24 \
+
+\f0\fs34                 <option>Primary (K-5)</option>
+\f1\fs24 \
+
+\f0\fs34                 <option>Middle School (6-8)</option>
+\f1\fs24 \
+
+\f0\fs34                 <option>High School (9-12)</option>
+\f1\fs24 \
+
+\f0\fs34               </select>
+\f1\fs24 \
+
+\f0\fs34             </div>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <label class="block text-sm font-medium text-gray-600 mb-1.5">Message</label>
+\f1\fs24 \
+
+\f0\fs34             <textarea rows="4" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm" placeholder="Tell us how we can help..."></textarea>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34           <button type="submit" class="gradient-gold text-[var(--navy)] font-semibold px-8 py-3.5 rounded-full shadow hover:shadow-lg transition w-full sm:w-auto">
+\f1\fs24 \
+
+\f0\fs34             Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+\f1\fs24 \
+
+\f0\fs34           </button>
+\f1\fs24 \
+
+\f0\fs34           <p id="formSuccess" class="text-green-600 text-sm font-medium hidden">\uc0\u10003  Thank you! We'll get back to you within 24 hours.</p>
+\f1\fs24 \
+
+\f0\fs34         </form>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <div class="lg:col-span-2 space-y-5 reveal">
+\f1\fs24 \
+
+\f0\fs34         <div class="bg-white rounded-2xl shadow p-6 flex items-start gap-4">
+\f1\fs24 \
+
+\f0\fs34           <div class="w-12 h-12 rounded-full gradient-navy flex items-center justify-center text-[var(--gold)] flex-shrink-0">
+\f1\fs24 \
+
+\f0\fs34             <i class="fa-solid fa-location-dot"></i>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <h4 class="font-semibold text-[var(--navy)] mb-1">Our Campus</h4>
+\f1\fs24 \
+
+\f0\fs34             <p class="text-sm text-gray-500">123 Learning Lane, Springfield, ST 45678</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="bg-white rounded-2xl shadow p-6 flex items-start gap-4">
+\f1\fs24 \
+
+\f0\fs34           <div class="w-12 h-12 rounded-full gradient-navy flex items-center justify-center text-[var(--gold)] flex-shrink-0">
+\f1\fs24 \
+
+\f0\fs34             <i class="fa-solid fa-clock"></i>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <h4 class="font-semibold text-[var(--navy)] mb-1">Office Hours</h4>
+\f1\fs24 \
+
+\f0\fs34             <p class="text-sm text-gray-500">Mon - Fri: 7:30 AM - 4:30 PM</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="bg-white rounded-2xl shadow p-6 flex items-start gap-4">
+\f1\fs24 \
+
+\f0\fs34           <div class="w-12 h-12 rounded-full gradient-navy flex items-center justify-center text-[var(--gold)] flex-shrink-0">
+\f1\fs24 \
+
+\f0\fs34             <i class="fa-solid fa-envelope-open-text"></i>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34           <div>
+\f1\fs24 \
+
+\f0\fs34             <h4 class="font-semibold text-[var(--navy)] mb-1">Email Us</h4>
+\f1\fs24 \
+
+\f0\fs34             <p class="text-sm text-gray-500">{\field{\*\fldinst{HYPERLINK "mailto:admissions@brightwood.edu"}}{\fldrslt admissions@brightwood.edu}}</p>
+\f1\fs24 \
+
+\f0\fs34           </div>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <div class="rounded-2xl overflow-hidden shadow h-48">
+\f1\fs24 \
+
+\f0\fs34           <img src="{\field{\*\fldinst{HYPERLINK "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"}}{\fldrslt https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80}}" class="w-full h-full object-cover">
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </section>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- Footer -->
+\f1\fs24 \
+
+\f0\fs34 <footer class="gradient-navy text-gray-300 pt-16 pb-8">
+\f1\fs24 \
+
+\f0\fs34   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-10 mb-10">
+\f1\fs24 \
+
+\f0\fs34     <div>
+\f1\fs24 \
+
+\f0\fs34       <div class="flex items-center gap-3 mb-4">
+\f1\fs24 \
+
+\f0\fs34         <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+\f1\fs24 \
+
+\f0\fs34           <i class="fa-solid fa-graduation-cap text-[var(--gold)]"></i>
+\f1\fs24 \
+
+\f0\fs34         </div>
+\f1\fs24 \
+
+\f0\fs34         <h3 class="text-white font-bold text-lg">Brightwood Academy</h3>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34       <p class="text-sm text-gray-400 leading-relaxed">Nurturing bright minds and building strong futures since 1999.</p>
+\f1\fs24 \
+
+\f0\fs34       <div class="flex gap-3 mt-5">
+\f1\fs24 \
+
+\f0\fs34         <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--gold)] hover:text-[var(--navy)] transition"><i class="fa-brands fa-facebook-f"></i></a>
+\f1\fs24 \
+
+\f0\fs34         <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--gold)] hover:text-[var(--navy)] transition"><i class="fa-brands fa-instagram"></i></a>
+\f1\fs24 \
+
+\f0\fs34         <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--gold)] hover:text-[var(--navy)] transition"><i class="fa-brands fa-twitter"></i></a>
+\f1\fs24 \
+
+\f0\fs34         <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--gold)] hover:text-[var(--navy)] transition"><i class="fa-brands fa-youtube"></i></a>
+\f1\fs24 \
+
+\f0\fs34       </div>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div>
+\f1\fs24 \
+
+\f0\fs34       <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+\f1\fs24 \
+
+\f0\fs34       <ul class="space-y-3 text-sm">
+\f1\fs24 \
+
+\f0\fs34         <li><a href="#about" class="hover:text-[var(--gold)] transition">About Us</a></li>
+\f1\fs24 \
+
+\f0\fs34         <li><a href="#academics" class="hover:text-[var(--gold)] transition">Academics</a></li>
+\f1\fs24 \
+
+\f0\fs34         <li><a href="#admission" class="hover:text-[var(--gold)] transition">Admissions</a></li>
+\f1\fs24 \
+
+\f0\fs34         <li><a href="#gallery" class="hover:text-[var(--gold)] transition">Campus Life</a></li>
+\f1\fs24 \
+
+\f0\fs34         <li><a href="#contact" class="hover:text-[var(--gold)] transition">Contact</a></li>
+\f1\fs24 \
+
+\f0\fs34       </ul>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div>
+\f1\fs24 \
+
+\f0\fs34       <h4 class="text-white font-semibold mb-4">Programs</h4>
+\f1\fs24 \
+
+\f0\fs34       <ul class="space-y-3 text-sm">
+\f1\fs24 \
+
+\f0\fs34         <li><a href="#" class="hover:text-[var(--gold)] transition">Early Years</a></li>
+\f1\fs24 \
+
+\f0\fs34         <li><a href="#" class="hover:text-[var(--gold)] transition">Primary School</a></li>
+\f1\fs24 \
+
+\f0\fs34         <li><a href="#" class="hover:text-[var(--gold)] transition">Middle School</a></li>
+\f1\fs24 \
+
+\f0\fs34         <li><a href="#" class="hover:text-[var(--gold)] transition">High School</a></li>
+\f1\fs24 \
+
+\f0\fs34       </ul>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34     <div>
+\f1\fs24 \
+
+\f0\fs34       <h4 class="text-white font-semibold mb-4">Newsletter</h4>
+\f1\fs24 \
+
+\f0\fs34       <p class="text-sm text-gray-400 mb-4">Subscribe to get the latest updates and news.</p>
+\f1\fs24 \
+
+\f0\fs34       <form class="flex" onsubmit="event.preventDefault(); this.reset(); alert('Thanks for subscribing!');">
+\f1\fs24 \
+
+\f0\fs34         <input type="email" required placeholder="Your email" class="w-full px-4 py-2.5 rounded-l-lg text-sm text-gray-800 focus:outline-none">
+\f1\fs24 \
+
+\f0\fs34         <button class="gradient-gold text-[var(--navy)] px-4 rounded-r-lg font-semibold"><i class="fa-solid fa-paper-plane"></i></button>
+\f1\fs24 \
+
+\f0\fs34       </form>
+\f1\fs24 \
+
+\f0\fs34     </div>
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34   <div class="border-t border-white/10 pt-6 text-center text-sm text-gray-400">
+\f1\fs24 \
+
+\f0\fs34     &copy; 2025 Brightwood Academy. All rights reserved. Designed with <i class="fa-solid fa-heart text-[var(--gold)]"></i> for education.
+\f1\fs24 \
+
+\f0\fs34   </div>
+\f1\fs24 \
+
+\f0\fs34 </footer>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <!-- Back to top -->
+\f1\fs24 \
+
+\f0\fs34 <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 rounded-full gradient-gold text-[var(--navy)] shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all z-50">
+\f1\fs24 \
+
+\f0\fs34   <i class="fa-solid fa-arrow-up"></i>
+\f1\fs24 \
+
+\f0\fs34 </button>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 <script>
+\f1\fs24 \
+
+\f0\fs34   // Mobile menu toggle
+\f1\fs24 \
+
+\f0\fs34   const menuBtn = document.getElementById('menuBtn');
+\f1\fs24 \
+
+\f0\fs34   const mobileMenu = document.getElementById('mobileMenu');
+\f1\fs24 \
+
+\f0\fs34   menuBtn.addEventListener('click', () => \{
+\f1\fs24 \
+
+\f0\fs34     mobileMenu.classList.toggle('open');
+\f1\fs24 \
+
+\f0\fs34     menuBtn.innerHTML = mobileMenu.classList.contains('open') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+\f1\fs24 \
+
+\f0\fs34   \});
+\f1\fs24 \
+
+\f0\fs34   document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', () => \{
+\f1\fs24 \
+
+\f0\fs34     mobileMenu.classList.remove('open');
+\f1\fs24 \
+
+\f0\fs34     menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+\f1\fs24 \
+
+\f0\fs34   \}));
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0   // Navbar shadow on scroll + back to top visibility
+\f1\fs24 \
+
+\f0\fs34   window.addEventListener('scroll', () => \{
+\f1\fs24 \
+
+\f0\fs34     const nav = document.getElementById('navbar');
+\f1\fs24 \
+
+\f0\fs34     if (window.scrollY > 20) nav.classList.add('shadow-lg'); else nav.classList.remove('shadow-lg');
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0     const btt = document.getElementById('backToTop');
+\f1\fs24 \
+
+\f0\fs34     if (window.scrollY > 400) \{
+\f1\fs24 \
+
+\f0\fs34       btt.classList.remove('opacity-0','pointer-events-none');
+\f1\fs24 \
+
+\f0\fs34     \} else \{
+\f1\fs24 \
+
+\f0\fs34       btt.classList.add('opacity-0','pointer-events-none');
+\f1\fs24 \
+
+\f0\fs34     \}
+\f1\fs24 \
+
+\f0\fs34   \});
+\f1\fs24 \
+
+\f0\fs34   document.getElementById('backToTop').addEventListener('click', () => window.scrollTo(\{top:0, behavior:'smooth'\}));
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0   // Reveal on scroll
+\f1\fs24 \
+
+\f0\fs34   const revealEls = document.querySelectorAll('.reveal');
+\f1\fs24 \
+
+\f0\fs34   const io = new IntersectionObserver((entries) => \{
+\f1\fs24 \
+
+\f0\fs34     entries.forEach(entry => \{
+\f1\fs24 \
+
+\f0\fs34       if (entry.isIntersecting) \{
+\f1\fs24 \
+
+\f0\fs34         entry.target.classList.add('active');
+\f1\fs24 \
+
+\f0\fs34         io.unobserve(entry.target);
+\f1\fs24 \
+
+\f0\fs34       \}
+\f1\fs24 \
+
+\f0\fs34     \});
+\f1\fs24 \
+
+\f0\fs34   \}, \{threshold: 0.15\});
+\f1\fs24 \
+
+\f0\fs34   revealEls.forEach(el => io.observe(el));
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0   // Counters
+\f1\fs24 \
+
+\f0\fs34   const counters = document.querySelectorAll('.counter');
+\f1\fs24 \
+
+\f0\fs34   let countersStarted = false;
+\f1\fs24 \
+
+\f0\fs34   const statsSection = document.getElementById('stats');
+\f1\fs24 \
+
+\f0\fs34   const counterObserver = new IntersectionObserver((entries) => \{
+\f1\fs24 \
+
+\f0\fs34     entries.forEach(entry => \{
+\f1\fs24 \
+
+\f0\fs34       if (entry.isIntersecting && !countersStarted) \{
+\f1\fs24 \
+
+\f0\fs34         countersStarted = true;
+\f1\fs24 \
+
+\f0\fs34         counters.forEach(counter => \{
+\f1\fs24 \
+
+\f0\fs34           const target = +counter.getAttribute('data-target');
+\f1\fs24 \
+
+\f0\fs34           let count = 0;
+\f1\fs24 \
+
+\f0\fs34           const step = Math.max(1, Math.floor(target / 60));
+\f1\fs24 \
+
+\f0\fs34           const update = () => \{
+\f1\fs24 \
+
+\f0\fs34             count += step;
+\f1\fs24 \
+
+\f0\fs34             if (count >= target) \{
+\f1\fs24 \
+
+\f0\fs34               counter.textContent = target;
+\f1\fs24 \
+
+\f0\fs34             \} else \{
+\f1\fs24 \
+
+\f0\fs34               counter.textContent = count;
+\f1\fs24 \
+
+\f0\fs34               requestAnimationFrame(update);
+\f1\fs24 \
+
+\f0\fs34             \}
+\f1\fs24 \
+
+\f0\fs34           \};
+\f1\fs24 \
+
+\f0\fs34           update();
+\f1\fs24 \
+
+\f0\fs34         \});
+\f1\fs24 \
+
+\f0\fs34       \}
+\f1\fs24 \
+
+\f0\fs34     \});
+\f1\fs24 \
+
+\f0\fs34   \}, \{threshold: 0.3\});
+\f1\fs24 \
+
+\f0\fs34   counterObserver.observe(statsSection);
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0   // Testimonial slider
+\f1\fs24 \
+
+\f0\fs34   const cards = document.querySelectorAll('.testimonial-card');
+\f1\fs24 \
+
+\f0\fs34   const dots = document.querySelectorAll('.dot');
+\f1\fs24 \
+
+\f0\fs34   let current = 0;
+\f1\fs24 \
+
+\f0\fs34   function showSlide(i) \{
+\f1\fs24 \
+
+\f0\fs34     cards.forEach((c, idx) => c.classList.toggle('active', idx === i));
+\f1\fs24 \
+
+\f0\fs34     dots.forEach((d, idx) => d.classList.toggle('opacity-100', idx === i));
+\f1\fs24 \
+
+\f0\fs34     dots.forEach((d, idx) => d.classList.toggle('opacity-30', idx !== i));
+\f1\fs24 \
+
+\f0\fs34     current = i;
+\f1\fs24 \
+
+\f0\fs34   \}
+\f1\fs24 \
+
+\f0\fs34   dots.forEach(dot => dot.addEventListener('click', () => showSlide(+dot.dataset.i)));
+\f1\fs24 \
+
+\f0\fs34   setInterval(() => \{
+\f1\fs24 \
+
+\f0\fs34     showSlide((current + 1) % cards.length);
+\f1\fs24 \
+
+\f0\fs34   \}, 5000);
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0   // FAQ Accordion
+\f1\fs24 \
+
+\f0\fs34   document.querySelectorAll('.faq-btn').forEach(btn => \{
+\f1\fs24 \
+
+\f0\fs34     btn.addEventListener('click', () => \{
+\f1\fs24 \
+
+\f0\fs34       const content = btn.nextElementSibling;
+\f1\fs24 \
+
+\f0\fs34       const icon = btn.querySelector('i');
+\f1\fs24 \
+
+\f0\fs34       const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+\f1\fs24 \
+
+\f0\fs34       document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = '0px');
+\f1\fs24 \
+
+\f0\fs34       document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+\f1\fs24 \
+
+\f0\fs34       if (!isOpen) \{
+\f1\fs24 \
+
+\f0\fs34         content.style.maxHeight = content.scrollHeight + 'px';
+\f1\fs24 \
+
+\f0\fs34         icon.style.transform = 'rotate(45deg)';
+\f1\fs24 \
+
+\f0\fs34       \}
+\f1\fs24 \
+
+\f0\fs34     \});
+\f1\fs24 \
+
+\f0\fs34   \});
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0   // Contact form
+\f1\fs24 \
+
+\f0\fs34   document.getElementById('contactForm').addEventListener('submit', function(e) \{
+\f1\fs24 \
+
+\f0\fs34     e.preventDefault();
+\f1\fs24 \
+
+\f0\fs34     document.getElementById('formSuccess').classList.remove('hidden');
+\f1\fs24 \
+
+\f0\fs34     this.reset();
+\f1\fs24 \
+
+\f0\fs34     setTimeout(() => \{
+\f1\fs24 \
+
+\f0\fs34       document.getElementById('formSuccess').classList.add('hidden');
+\f1\fs24 \
+
+\f0\fs34     \}, 5000);
+\f1\fs24 \
+
+\f0\fs34   \});
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0   // Smooth scroll for anchor links
+\f1\fs24 \
+
+\f0\fs34   document.querySelectorAll('a[href^="#"]').forEach(anchor => \{
+\f1\fs24 \
+
+\f0\fs34     anchor.addEventListener('click', function(e) \{
+\f1\fs24 \
+
+\f0\fs34       const target = document.querySelector(this.getAttribute('href'));
+\f1\fs24 \
+
+\f0\fs34       if (target) \{
+\f1\fs24 \
+
+\f0\fs34         e.preventDefault();
+\f1\fs24 \
+
+\f0\fs34         target.scrollIntoView(\{behavior: 'smooth', block: 'start'\});
+\f1\fs24 \
+
+\f0\fs34       \}
+\f1\fs24 \
+
+\f0\fs34     \});
+\f1\fs24 \
+
+\f0\fs34   \});
+\f1\fs24 \
+
+\f0\fs34 </script>
+\f1\fs24 \
+
+\f0\fs34 </body>
+\f1\fs24 \
+
+\f0\fs34 </html>
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl283\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf0 Is code ka html index bana kr doh }
