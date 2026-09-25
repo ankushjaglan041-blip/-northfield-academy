@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRON FORGE GYM | No Excuses</title>
+    
+    <!-- Fonts: Oswald for bold, aggressive headers; Inter for readable body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons for sharp, modern iconography -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'forge-crimson': '#DC143C',
+                        'forge-crimson-dark': '#990E29',
+                        'forge-dark': '#0a0a0a',
+                        'forge-surface': '#141414',
+                        'forge-surface-light': '#1f1f1f',
+                    },
+                    fontFamily: {
+                        display: ['Oswald', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'crimson-glow': '0 0 20px rgba(220, 20, 60, 0.5)',
+                        'crimson-glow-strong': '0 0 40px rgba(220, 20, 60, 0.8)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Scrollbar */
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f1f1f;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #DC143C;
+        }
+
+        /* Diagonal slashes for energetic UI */
+        .slash-divider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent 0%, #DC143C 50%, transparent 100%);
+            transform: skew(-45deg);
+        }
+
+        .clip-angled {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        
+        .clip-button {
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+        }
+
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active, .reveal-left.active, .reveal-right.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Glitch text effect on hover */
+        .glitch-hover:hover {
+            animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+            color: #DC143C;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+
+        /* Hero Background with moving gradient overlay */
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(10,10,10,0.9) 0%, rgba(220,20,60,0.1) 100%);
+        }
+    </style>
+</head>
+<body class="font-body antialiased selection:bg-forge-crimson selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-6 lg:px-12 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <!-- Logo -->
+            <a href="#" class="font-display font-bold text-2xl lg:text-3xl uppercase tracking-wider flex items-center gap-2 group">
+                <i class="ph-fill ph-barbell text-forge-crimson group-hover:rotate-12 transition-transform duration-300"></i>
+                <span>Iron <span class="text-forge-crimson">Forge</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8 font-display uppercase tracking-widest text-sm font-semibold">
+                <a href="#about" class="hover:text-forge-crimson transition-colors glitch-hover">Philosophy</a>
+                <a href="#programs" class="hover:text-forge-crimson transition-colors glitch-hover">Programs</a>
+                <a href="#coaches" class="hover:text-forge-crimson transition-colors glitch-hover">Coaches</a>
+                <a href="#contact" class="hover:text-forge-crimson transition-colors glitch-hover">Contact</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="hidden lg:block">
+                <a href="#join" class="clip-button bg-forge-crimson hover:bg-forge-crimson-dark text-white px-8 py-3 font-display uppercase tracking-widest text-sm font-bold transition-all duration-300 hover:shadow-crimson-glow">
+                    Join The Forge
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-btn" class="lg:hidden text-3xl text-white hover:text-forge-crimson transition-colors focus:outline-none">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-forge-surface border-b border-white/10 hidden flex-col items-center py-6 gap-6 font-display uppercase tracking-widest font-semibold shadow-2xl">
+            <a href="#about" class="mobile-link text-white hover:text-forge-crimson transition-colors">Philosophy</a>
+            <a href="#programs" class="mobile-link text-white hover:text-forge-crimson transition-colors">Programs</a>
+            <a href="#coaches" class="mobile-link text-white hover:text-forge-crimson transition-colors">Coaches</a>
+            <a href="#contact" class="mobile-link text-white hover:text-forge-crimson transition-colors">Contact</a>
+            <a href="#join" class="mobile-link clip-button bg-forge-crimson text-white px-8 py-3 w-3/4 text-center mt-2">Join Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden clip-angled bg-forge-dark">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" alt="Gym Background" class="w-full h-full object-cover opacity-50 scale-105 animate-[pulse_10s_ease-in-out_infinite]">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center mt-16">
+            <div class="inline-block mb-4 reveal">
+                <span class="bg-forge-crimson/20 text-forge-crimson border border-forge-crimson/30 px-4 py-1 text-xs font-display tracking-[0.3em] uppercase">USA Premium Training Facility</span>
+            </div>
+            
+            <h1 class="font-display font-bold text-6xl md:text-8xl lg:text-9xl uppercase tracking-tighter leading-none mb-6 reveal delay-100 drop-shadow-2xl">
+                Forge Your <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-forge-crimson to-red-600">Legacy</span>
+            </h1>
+            
+            <p class="font-body text-gray-300 text-base md:text-xl max-w-2xl mx-auto mb-10 reveal delay-200">
+                Discipline equals freedom. Step into a sanctuary built for hard work, iron, and uncompromising results. No excuses.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 reveal delay-300">
+                <a href="#programs" class="clip-button bg-forge-crimson hover:bg-white hover:text-forge-dark text-white px-10 py-4 font-display uppercase tracking-widest text-lg font-bold transition-all duration-300 shadow-crimson-glow w-full sm:w-auto">
+                    Start Training
+                </a>
+                <a href="#about" class="clip-button bg-transparent border border-white hover:border-forge-crimson hover:text-forge-crimson text-white px-10 py-4 font-display uppercase tracking-widest text-lg font-bold transition-all duration-300 w-full sm:w-auto">
+                    Our Philosophy
+                </a>
+            </div>
+        </div>
+
+        <!-- Social Links Vertical -->
+        <div class="absolute right-6 top-1/2 transform -translate-y-1/2 hidden lg:flex flex-col gap-6 z-20">
+            <a href="#" class="text-gray-500 hover:text-forge-crimson transition-colors"><i class="ph ph-instagram-logo text-2xl"></i></a>
+            <a href="#" class="text-gray-500 hover:text-forge-crimson transition-colors"><i class="ph ph-youtube-logo text-2xl"></i></a>
+            <a href="#" class="text-gray-500 hover:text-forge-crimson transition-colors"><i class="ph ph-tiktok-logo text-2xl"></i></a>
+            <div class="w-[1px] h-12 bg-gray-600 mx-auto mt-2"></div>
+        </div>
+    </header>
+
+    <!-- Philosophy / About -->
+    <section id="about" class="py-24 bg-forge-dark relative">
+        <div class="slash-divider"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Text Content -->
+                <div class="order-2 lg:order-1">
+                    <h2 class="font-display font-bold text-4xl md:text-5xl uppercase tracking-tight mb-6 reveal-left">
+                        We Don't Sell <span class="text-forge-crimson">Shortcuts.</span>
+                    </h2>
+                    <p class="font-body text-gray-400 text-lg mb-6 leading-relaxed reveal-left delay-100">
+                        Iron Forge Gym isn't a social club. It's a proving ground. We built this facility in the USA with one purpose in mind: to provide the ultimate environment for individuals who are serious about pushing their physical and mental limits.
+                    </p>
+                    <p class="font-body text-gray-400 text-lg mb-10 leading-relaxed reveal-left delay-200">
+                        Top-tier equipment. Elite coaching. An atmosphere dripping with intensity. Whether you're a powerlifter, a fighter, or just someone who refuses to be average, you belong here.
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 border-t border-white/10 pt-8 reveal-left delay-300">
+                        <div>
+                            <p class="font-display text-3xl md:text-4xl text-white font-bold">24/7</p>
+                            <p class="font-display text-forge-crimson text-sm uppercase tracking-widest mt-1">Access</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-3xl md:text-4xl text-white font-bold">15K+</p>
+                            <p class="font-display text-forge-crimson text-sm uppercase tracking-widest mt-1">Sq Ft Area</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-3xl md:text-4xl text-white font-bold">100%</p>
+                            <p class="font-display text-forge-crimson text-sm uppercase tracking-widest mt-1">Commitment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="order-1 lg:order-2 relative reveal-right">
+                    <!-- Red decorative box -->
+                    <div class="absolute -inset-4 border-2 border-forge-crimson translate-x-4 translate-y-4 z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop" alt="Intense Workout" class="relative z-10 w-full h-[500px] object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700">
+                    
+                    <!-- Floating badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-forge-surface border-l-4 border-forge-crimson p-6 z-20 shadow-2xl">
+                        <i class="ph-fill ph-fire text-forge-crimson text-4xl mb-2"></i>
+                        <p class="font-display text-xl uppercase font-bold text-white">No Excuses.</p>
+                        <p class="text-gray-400 text-sm">Just Results.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="py-24 bg-forge-surface relative overflow-hidden clip-angled">
+        <!-- Background "FORGE" text watermark -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[20vw] font-display font-bold text-white/[0.02] pointer-events-none uppercase w-full text-center tracking-tighter">
+            Strength
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="text-forge-crimson font-display uppercase tracking-widest text-sm font-bold">The Arsenal</span>
+                <h2 class="font-display font-bold text-4xl md:text-5xl uppercase tracking-tight text-white mt-2">Elite <span class="text-forge-crimson">Programs</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="group relative bg-forge-dark border border-white/5 overflow-hidden reveal hover:border-forge-crimson/50 transition-colors duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop" alt="Strength" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                        <div class="absolute top-4 right-4 z-20 bg-forge-crimson text-white font-display text-xs px-3 py-1 uppercase tracking-widest font-bold">Heavy</div>
+                    </div>
+                    <div class="p-8 relative">
+                        <!-- Decorative top line -->
+                        <div class="absolute top-0 left-0 w-0 h-1 bg-forge-crimson group-hover:w-full transition-all duration-500"></div>
+                        <h3 class="font-display text-2xl uppercase font-bold text-white mb-3">Power & Strength</h3>
+                        <p class="font-body text-gray-400 text-sm mb-6 leading-relaxed">Master the big lifts. Squat, bench, deadlift. Tailored programming to maximize pure, raw power and muscle density.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-forge-crimson font-display uppercase tracking-widest text-sm font-bold group-hover:text-white transition-colors">
+                            View Details <i class="ph-bold ph-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative bg-forge-dark border border-white/5 overflow-hidden reveal delay-100 hover:border-forge-crimson/50 transition-colors duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=2070&auto=format&fit=crop" alt="Combat" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                        <div class="absolute top-4 right-4 z-20 bg-forge-crimson text-white font-display text-xs px-3 py-1 uppercase tracking-widest font-bold">Striking</div>
+                    </div>
+                    <div class="p-8 relative">
+                        <div class="absolute top-0 left-0 w-0 h-1 bg-forge-crimson group-hover:w-full transition-all duration-500"></div>
+                        <h3 class="font-display text-2xl uppercase font-bold text-white mb-3">Combat Arts</h3>
+                        <p class="font-body text-gray-400 text-sm mb-6 leading-relaxed">Boxing and Muay Thai mechanics. Build relentless stamina, speed, and striking power in our heavy bag and sparring arenas.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-forge-crimson font-display uppercase tracking-widest text-sm font-bold group-hover:text-white transition-colors">
+                            View Details <i class="ph-bold ph-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative bg-forge-dark border border-white/5 overflow-hidden reveal delay-200 hover:border-forge-crimson/50 transition-colors duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1434596922112-19c563067271?q=80&w=2070&auto=format&fit=crop" alt="Conditioning" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 object-top">
+                        <div class="absolute top-4 right-4 z-20 bg-forge-crimson text-white font-display text-xs px-3 py-1 uppercase tracking-widest font-bold">Endurance</div>
+                    </div>
+                    <div class="p-8 relative">
+                        <div class="absolute top-0 left-0 w-0 h-1 bg-forge-crimson group-hover:w-full transition-all duration-500"></div>
+                        <h3 class="font-display text-2xl uppercase font-bold text-white mb-3">Iron Conditioning</h3>
+                        <p class="font-body text-gray-400 text-sm mb-6 leading-relaxed">High-intensity functional training. Sleds, ropes, kettlebells. Push your cardiovascular limits and forge an unbreakable engine.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-forge-crimson font-display uppercase tracking-widest text-sm font-bold group-hover:text-white transition-colors">
+                            View Details <i class="ph-bold ph-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-20 bg-forge-crimson relative overflow-hidden">
+        <!-- Textured background -->
+        <div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), repeating-linear-gradient(45deg, #000 25%, #0a0a0a 25%, #0a0a0a 75%, #000 75%, #000); background-position: 0 0, 10px 10px; background-size: 20px 20px;"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10 reveal">
+            <h2 class="font-display font-bold text-4xl md:text-6xl uppercase text-white mb-6 drop-shadow-lg">
+                Ready to Stop Being Average?
+            </h2>
+            <p class="font-body text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                First session is on us. Experience the intensity, meet the coaches, and see if you have what it takes to survive the Forge.
+            </p>
+            <a href="#contact" class="inline-block clip-button bg-forge-dark hover:bg-white hover:text-forge-dark text-white px-12 py-5 font-display uppercase tracking-widest text-xl font-bold transition-all duration-300 shadow-2xl">
+                Claim Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact / Location -->
+    <section id="contact" class="py-24 bg-forge-dark relative">
+        <div class="slash-divider top-0"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Form -->
+                <div class="reveal-left bg-forge-surface p-8 lg:p-12 border border-white/5 relative">
+                    <div class="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-forge-crimson"></div>
+                    <div class="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-forge-crimson"></div>
+                    
+                    <h2 class="font-display font-bold text-3xl uppercase text-white mb-2">Enlist Now</h2>
+                    <p class="text-gray-400 text-sm mb-8 font-body">Drop your info below. We'll contact you to set up your induction.</p>
+                    
+                    <form class="space-y-6 font-body">
+                        <div>
+                            <input type="text" placeholder="FULL NAME" class="w-full bg-forge-dark border border-gray-800 p-4 text-white uppercase focus:outline-none focus:border-forge-crimson transition-colors" required>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="email" placeholder="EMAIL ADDRESS" class="w-full bg-forge-dark border border-gray-800 p-4 text-white uppercase focus:outline-none focus:border-forge-crimson transition-colors" required>
+                            <input type="tel" placeholder="PHONE NUMBER" class="w-full bg-forge-dark border border-gray-800 p-4 text-white uppercase focus:outline-none focus:border-forge-crimson transition-colors">
+                        </div>
+                        <div>
+                            <select class="w-full bg-forge-dark border border-gray-800 p-4 text-gray-400 uppercase focus:outline-none focus:border-forge-crimson transition-colors appearance-none">
+                                <option value="" disabled selected>SELECT PRIMARY GOAL</option>
+                                <option value="strength">Strength / Powerlifting</option>
+                                <option value="weightloss">Fat Loss / Conditioning</option>
+                                <option value="combat">Combat Arts</option>
+                                <option value="general">General Fitness</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full clip-button bg-forge-crimson hover:bg-forge-crimson-dark text-white p-4 font-display uppercase tracking-widest font-bold transition-colors">
+                            Submit Application
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info & Map -->
+                <div class="reveal-right flex flex-col justify-between">
+                    <div>
+                        <h2 class="font-display font-bold text-3xl md:text-5xl uppercase text-white mb-8">
+                            Headquarters <br><span class="text-forge-crimson">USA</span>
+                        </h2>
+                        
+                        <div class="space-y-6 mb-12 font-body text-gray-300">
+                            <div class="flex items-start gap-4 group cursor-pointer">
+                                <div class="bg-forge-surface p-3 text-forge-crimson group-hover:bg-forge-crimson group-hover:text-white transition-colors">
+                                    <i class="ph-fill ph-map-pin text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-display uppercase tracking-widest text-sm font-bold text-white mb-1">Location</p>
+                                    <p>1984 Ironborn Way<br>Austin, Texas 78701<br>United States</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 group cursor-pointer">
+                                <div class="bg-forge-surface p-3 text-forge-crimson group-hover:bg-forge-crimson group-hover:text-white transition-colors">
+                                    <i class="ph-fill ph-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-display uppercase tracking-widest text-sm font-bold text-white mb-1">Hours of Operation</p>
+                                    <p>Members: 24/7 Access<br>Staffed: Mon-Sat, 6AM - 10PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 group cursor-pointer">
+                                <div class="bg-forge-surface p-3 text-forge-crimson group-hover:bg-forge-crimson group-hover:text-white transition-colors">
+                                    <i class="ph-fill ph-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-display uppercase tracking-widest text-sm font-bold text-white mb-1">Contact</p>
+                                    <p>+1 (512) 555-IRON<br>info@ironforgegym.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder Image (Stylized) -->
+                    <div class="relative h-48 w-full bg-forge-surface border border-white/5 overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop" alt="Map Location" class="w-full h-full object-cover filter grayscale contrast-150 opacity-50 group-hover:opacity-80 transition-opacity duration-500">
+                        <div class="absolute inset-0 bg-forge-crimson/10 mix-blend-overlay"></div>
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-forge-crimson text-4xl animate-bounce">
+                            <i class="ph-fill ph-map-pin"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#050505] pt-16 pb-8 border-t border-forge-surface">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-12">
+                <div>
+                    <a href="#" class="font-display font-bold text-3xl uppercase tracking-wider flex items-center justify-center md:justify-start gap-2 mb-4">
+                        <i class="ph-fill ph-barbell text-forge-crimson"></i>
+                        <span>Iron <span class="text-forge-crimson">Forge</span></span>
+                    </a>
+                    <p class="font-body text-gray-500 text-sm max-w-sm mx-auto md:mx-0">
+                        The premier strength and conditioning facility in the USA. Designed for those who demand excellence and leave excuses at the door.
+                    </p>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="#" class="w-12 h-12 bg-forge-surface flex items-center justify-center text-white hover:bg-forge-crimson transition-colors clip-angled">
+                        <i class="ph-fill ph-instagram-logo text-xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-forge-surface flex items-center justify-center text-white hover:bg-forge-crimson transition-colors clip-angled">
+                        <i class="ph-fill ph-youtube-logo text-xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-forge-surface flex items-center justify-center text-white hover:bg-forge-crimson transition-colors clip-angled">
+                        <i class="ph-fill ph-tiktok-logo text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-display uppercase tracking-widest text-gray-600">
+                <p>&copy; 2026 IRON FORGE GYM. ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-forge-crimson transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-forge-crimson transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Mobile Menu Toggle
+            const btn = document.getElementById('mobile-btn');
+            const menu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            const icon = btn.querySelector('i');
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                if(isMenuOpen) {
+                    menu.classList.remove('hidden');
+                    menu.classList.add('flex');
+                    icon.classList.replace('ph-list', 'ph-x');
+                } else {
+                    menu.classList.add('hidden');
+                    menu.classList.remove('flex');
+                    icon.classList.replace('ph-x', 'ph-list');
+                }
+            }
+
+            btn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+
+            // 2. Navbar Background on Scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-forge-dark/95', 'backdrop-blur-md', 'shadow-lg');
+                    navbar.classList.remove('py-6');
+                    navbar.classList.add('py-4');
+                } else {
+                    navbar.classList.remove('bg-forge-dark/95', 'backdrop-blur-md', 'shadow-lg');
+                    navbar.classList.add('py-6');
+                    navbar.classList.remove('py-4');
+                }
+            });
+
+            // 3. Scroll Reveal Animations (Intersection Observer)
+            // Select all elements that need revealing
+            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            
+            const revealOptions = {
+                threshold: 0.15, // Trigger when 15% of element is visible
+                rootMargin: "0px 0px -50px 0px" // Slight offset before triggering
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: unobserve if you only want the animation to play once
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => {
+                revealOnScroll.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
